@@ -31,9 +31,9 @@ function displayFinancialData(symbol){
      "<p>2017 Cost of Goods Sold: " + data.costCurrent +"</p>" +
      "<p>2016 Cost of Goods Sold: " + data.costPrevious +"</p>" +
      "<p>2015 Cost of Goods Sold:" + data.costPreviousTwo +"</p>" +
-     "<p>2017 Total Revenue: " + data.grossProfitCurrent +"</p>" +
-     "<p>2016 Total Revenue: " + data.grossProfitPrevious +"</p>" +
-     "<p>2015 Total Revenue " + data.grossProfitPreviousTwo +"</p>"
+     "<p>2017 Profit: " + data.grossProfitCurrent +"</p>" +
+     "<p>2016 Profit: " + data.grossProfitPrevious +"</p>" +
+     "<p>2015 Profit: " + data.grossProfitPreviousTwo +"</p>"
      );
   });
 }
