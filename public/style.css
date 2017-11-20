@@ -1,0 +1,141 @@
+*{
+/*     background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;*/
+    margin:0;
+    padding: 0;
+  }
+
+  body{
+    width: 100%;
+    height: 80vh;
+    background: url(./images/7GPER1e.gif); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    /*overflow: hidden;*/
+  }
+
+  .simple{
+    height: 600px;
+    background-color: white;
+    border-bottom: solid 1px black;
+  }
+
+  .header{
+    margin: 0;
+    padding: 0;
+    height: 200px;
+    text-align: center;
+    border-bottom: solid 1px black;
+  }
+
+  .form-group{
+    padding: 20px 40px 10px 40px;
+
+  }
+
+  form{
+    border: 1px solid black;
+    border-radius: 25px;
+    margin-top: 20px;
+    width: 300px;
+  }
+
+  #symbolSubmit{
+    margin: 10px 40px 20px 40px;
+  }
+
+  #symbol{
+    width: 200px;
+  }
+
+  #title{
+    font-size: 600%;
+    color: white;
+    margin: auto;
+    margin-top: 100px;
+    width: 50%;
+    border-radius: 5px;
+    padding: 20px;
+
+    background: -webkit-linear-gradient(left top, rgba(0,0,0,1), rgba(0,0,0,0)); 
+    background: -o-linear-gradient(bottom right, rgba(0,0,0,1), rgba(0,0,0,0)); 
+    background: -moz-linear-gradient(bottom right, rgba(0,0,0,1), rgba(0,0,0,0));
+    background: linear-gradient(to bottom right, rgba(0,0,0,1), rgba(0,0,0,0));
+  }
+
+
+
+  /*================================Column Chart Styling===========================================*/
+
+
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }
+
+  .bar {
+    fill: orange;
+  }
+
+  .bar:hover {
+    fill: orangered ;
+  }
+
+  .x.axis path {
+    display: none;
+  }
+
+  .d3-tip {
+    line-height: 1;
+    font-weight: bold;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 2px;
+  }
+
+  /* Creates a small triangle extender for the tooltip */
+  .d3-tip:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 10px;
+    width: 100%;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.8);
+    content: "\25BC";
+    position: absolute;
+    text-align: center;
+  }
+
+  /* Style northward tooltips differently */
+  .d3-tip.n:after {
+    margin: -1px 0 0 0;
+    top: 100%;
+    left: 0;
+  }
+
+
+
+
+
+  /*================================Line Graph Styling===========================================*/
+
+  path {
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+  }
+  .axis path, .axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+  }
