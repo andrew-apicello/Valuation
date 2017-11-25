@@ -20,6 +20,10 @@
     /*overflow: hidden;*/
   }
 
+  .row{
+    margin-top: 40px;
+  }
+
   .simple{
     height: 600px;
     background-color: white;
@@ -68,6 +72,9 @@
     background: -moz-linear-gradient(bottom right, rgba(0,0,0,1), rgba(0,0,0,0));
     background: linear-gradient(to bottom right, rgba(0,0,0,1), rgba(0,0,0,0));
   }
+
+
+
 
 
 
