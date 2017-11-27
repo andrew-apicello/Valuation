@@ -89,11 +89,11 @@
   }
 
   .bar {
-    fill: orange;
+    fill: black;
   }
 
   .bar:hover {
-    fill: orangered ;
+    fill: darkgray ;
   }
 
   .x.axis path {
@@ -136,7 +136,7 @@
   /*================================Line Graph Styling===========================================*/
 
   path {
-    stroke: steelblue;
+    stroke: black;
     stroke-width: 2;
     fill: none;
   }

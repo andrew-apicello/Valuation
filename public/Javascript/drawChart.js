@@ -2,6 +2,8 @@ function drawChart(data,axis){
 
 	// console.log(data);
 
+  $("#chart").html("<h2 style=\"color:black;\">Previous Twenty Quarters of Revenue</h2>")
+
   var margin = {top: 40, right: 20, bottom: 30, left: 40},
   width = 960 - margin.left - margin.right,
   height = 500 - margin.top - margin.bottom;
@@ -27,7 +29,7 @@ function drawChart(data,axis){
   .attr('class', 'd3-tip')
   .offset([-10, 0])
   .html(function(d) {
-    return "<strong>Revenue:</strong> <span style='color:red'>" + d.high + "</span>";
+    return "<strong>Revenue (B USD)</strong> <span style='color:red'>" + d.high + "</span>";
   })
 
   var svg = d3.select("#chart").append("svg")
@@ -74,5 +76,10 @@ function type(d) {
   d.high = + d.high;
   return d;
 }
+
+var ticks = d3.selectAll(".tick text");
+ticks.attr("class", function(d,i){
+    if(i%3 != 0) d3.select(this).remove();
+});
 
 };

@@ -1,7 +1,7 @@
 function getFundamentalFromSEC(ticker){
 
 const appKey = "2s6bv57phxdxetkxhry3zupk"
-const timeSeries = "ttm"//monthly
+const timeSeries = "qtr" //ttm" monthly
 const numberTime = "20"
 
 $.ajax({
@@ -27,7 +27,7 @@ $.ajax({
   }
   data = data.reverse();
 
-  drawChart(data,"Revenue");
+  drawChart(data,"Revenue (B USD)");
 
 })
 }

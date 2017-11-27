@@ -32,7 +32,7 @@ for (var i=0; i< 100;i++){
 
   high = parseInt(high);
   close = parseInt(close);
-  data.push({date: date,high:high});
+  // data.push({date: date,high:high});
   dataGraph.push({date: date, high: high.toString(),close: close.toString()});
 }
 
@@ -63,5 +63,8 @@ $.ajax({
   }).done(function(data) {
       console.log("Predicted close for next trading day: ")
       console.log(data);
+
+
+      $("#prediction").text("Machine Learning Linear Regression Prediction for Next Trading Day Close: $" + data);
     });
 }

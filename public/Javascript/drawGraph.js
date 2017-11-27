@@ -1,5 +1,8 @@
 function drawGraph(data){
 
+  $("#graph").html("<h2 style=\"color:black;\">Closing Price on Previous Hundred Trading Days</h2>")
+
+
 // Get the data
 // var data = [{
 //     date: "2017-11-10",
@@ -30,8 +33,8 @@ var margin = {
   bottom: 30,
   left: 50
 };
-var width = 600 - margin.left - margin.right;
-var height = 270 - margin.top - margin.bottom;
+var width = 960 - margin.left - margin.right;
+var height = 500 - margin.top - margin.bottom;
 
 var parseDate = d3.time.format("%Y-%m-%d").parse;
 
@@ -49,7 +52,7 @@ var valueline = d3.svg.line()
   return x(d.date);
 })
 .y(function (d) {
-  return y(d.high);
+  return y(d.close);
 });
 
 var svg = d3.select("#graph")
@@ -89,4 +92,6 @@ svg.append("g") // Add the X Axis
 svg.append("g") // Add the Y Axis
 .attr("class", "y axis")
 .call(yAxis);
+
+
 }

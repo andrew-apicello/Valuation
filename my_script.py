@@ -1,3 +1,5 @@
+# https://stackoverflow.com/questions/29462108/sklearn-linear-regression-x-and-y-input-format
+
 import sys, json;
 import matplotlib.pyplot as plt
 import numpy as np

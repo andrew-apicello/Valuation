@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 dates = []
 prices = []
 
-def get_data(filename)
 
 def predict_price(dates, prices, x):
     dates = np.reshape(dates,len(dates),1)

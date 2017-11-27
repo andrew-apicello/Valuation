@@ -1,5 +1,8 @@
 $("#symbolSubmit").on("click", function() {
 
+
+  $("#contact").css("padding-top","0px");
+  $("#analysisSection").css("display","block");
   event.preventDefault(); //if a submit button was used
   symbol = $("#symbol").val().trim();
   
