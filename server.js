@@ -40,23 +40,38 @@ if (process.env.MONGODB_URI){
 //==================================Routes=========================================
 
 
-app.get("/python", function(req, res) {
-	var pyshell = new PythonShell('moving_average.py');
-// sends a message to the Python script via stdin
-pyshell.send(1);
-pyshell.on('message', function (message) {
-  // received a message sent from the Python script (a simple "print" statement)
-  console.log(message);
-  var here = parseInt(message) + 1;
-  res.json(here + " hello world")
+app.post("/python", function(req, res) {
+	console.log("Enter Python Shell");
 
-});
-// end the input stream and allow the process to exit
-pyshell.end(function (err) {
-	if (err) throw err;
-	console.log('Python Script Complete');
-});
+	dataArray=[]
+
+
+	for (var i=0; i<99;i++){
+		let close = req.body["data[" + i + "][close]"];
+		dataArray.push(close);
+	}
+
+	console.log(dataArray);
+
+	// var testData = [["name","New York",],[31,45]];
+	var pyshell = new PythonShell('my_script.py');
+	pyshell.send(dataArray);
+	pyshell.on('message', function (message) {
+
+		console.log("Completed Script: " + message)
+		message = message.split('').slice(3,-3).join("")
+		res.send(message)
+	});
+
+	pyshell.end(function (err) {
+		if (err) throw err;
+		console.log('Python Script Complete');
+	});
 })
+
+
+
+
 
 
 
@@ -81,13 +96,13 @@ app.get("/fundamentals/:ticker", function(req,res){
 		if (!data) {
 			scrapeFundamentals.getRevenue(ticker,1,res)
 		}  else {
-			
+
 			console.log("data");
 			console.log("Returned Data From Database^^^");
 			res.json(data);
 		}
 	})
-	
+
 });
 
 

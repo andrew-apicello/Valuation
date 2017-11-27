@@ -33,13 +33,15 @@ for (var i=0; i< 100;i++){
   high = parseInt(high);
   close = parseInt(close);
   data.push({date: date,high:high});
-  dataGraph.push({date: date, high: high.toString(),close: close});
+  dataGraph.push({date: date, high: high.toString(),close: close.toString()});
 }
 
 
 
-dataGraph = dataGraph.slice(1)
+dataGraph = dataGraph.slice(1);
 drawGraph(dataGraph);
+console.log(dataGraph)
+python(dataGraph);
 
 
   // console.log(dataGraph)
@@ -48,4 +50,18 @@ drawGraph(dataGraph);
 	throw err;
 });
 
+}
+
+function python(data){
+
+$.ajax({
+    method: "POST",
+    url: "/python",
+    data: {
+      data:data
+    }
+  }).done(function(data) {
+      console.log("Predicted close for next trading day: ")
+      console.log(data);
+    });
 }

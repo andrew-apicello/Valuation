@@ -1,6 +1,6 @@
 function drawChart(data,axis){
 
-	console.log(data);
+	// console.log(data);
 
   var margin = {top: 40, right: 20, bottom: 30, left: 40},
   width = 960 - margin.left - margin.right,
