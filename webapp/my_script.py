@@ -1,7 +1,7 @@
 # https://stackoverflow.com/questions/29462108/sklearn-linear-regression-x-and-y-input-format
 
 import sys, json;
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import numpy as np
 from sklearn import datasets, linear_model
 # from sklearn.metrics import mean_squared_error, r2_score
