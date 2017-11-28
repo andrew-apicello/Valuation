@@ -12,9 +12,5 @@ WORKDIR /opt/webapp
 
 RUN conda install scikit-learn
 
-RUN conda install numpy
-
-RUN conda install matplotlib
-
 
 CMD gunicorn --bind 0.0.0.0:$PORT wsgi
