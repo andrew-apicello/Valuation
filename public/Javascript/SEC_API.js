@@ -5,7 +5,7 @@ const timeSeries = "qtr" //ttm" monthly
 const numberTime = "20"
 
 $.ajax({
- url: "http://edgaronline.api.mashery.com/v2/corefinancials/" + timeSeries + "?primarysymbols=" + ticker + "&numperiods=" + numberTime + "&appkey=" + appKey,
+ url: "https://edgaronline.api.mashery.com/v2/corefinancials/" + timeSeries + "?primarysymbols=" + ticker + "&numperiods=" + numberTime + "&appkey=" + appKey,
  method: 'GET',
 }).done(function(result) {
   // console.log(result.result.rows[0].values)

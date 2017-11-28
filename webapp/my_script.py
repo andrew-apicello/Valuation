@@ -4,8 +4,8 @@ import sys, json;
 import matplotlib.pyplot as plt
 import numpy as np
 from sklearn import datasets, linear_model
-from sklearn.metrics import mean_squared_error, r2_score
-from sklearn.svm import SVR
+# from sklearn.metrics import mean_squared_error, r2_score
+# from sklearn.svm import SVR
 
 
 # data = json.load(sys.stdin)
@@ -32,19 +32,19 @@ dates_train = np.array(dates)
 prices_train = np.array(prices)
 reg.fit(dates_train[:, np.newaxis], prices_train[:, np.newaxis])
 
-print(reg.coef_ * 100 + reg.intercept_)
+print(reg.coef_ * 101 + reg.intercept_)
 
 
 
 
-def predict_price(dates, prices):
+# def predict_price(dates, prices):
 
-	plt.plot(dates, prices, color='red', label='Test')
-	plt.xlabel("Index")
-	plt.ylabel("Price")
-	plt.title("Support Vector Regression")
-	plt.legend()
-	plt.show()
+# 	plt.plot(dates, prices, color='red', label='Test')
+# 	plt.xlabel("Index")
+# 	plt.ylabel("Price")
+# 	plt.title("Support Vector Regression")
+# 	plt.legend()
+# 	plt.show()
 
 # predict_price(dates,prices)
 

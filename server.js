@@ -54,7 +54,7 @@ app.post("/python", function(req, res) {
 	console.log(dataArray);
 
 	// var testData = [["name","New York",],[31,45]];
-	var pyshell = new PythonShell('my_script.py');
+	var pyshell = new PythonShell('./webapp/my_script.py');
 	pyshell.send(dataArray);
 	pyshell.on('message', function (message) {
 
