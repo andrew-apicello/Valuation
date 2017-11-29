@@ -9,8 +9,8 @@ var axios = require("axios"); //promise based http library
 var cheerio = require("cheerio"); //server side Jquery
 var db = require("./models");
 var PythonShell = require('python-shell');
-var scrapeFundamentals = require("./getRevenue.js");
-var scrapeBiotech = require("./Scrape_Top_Biotech.js")
+// var scrapeFundamentals = require("./getRevenue.js");
+// var scrapeBiotech = require("./Scrape_Top_Biotech.js")
 var PORT = process.env.PORT || 3000;
 
 app.listen(PORT, function() {
@@ -20,6 +20,7 @@ app.listen(PORT, function() {
 app.use(logger("dev"));
 app.use(bodyParser.urlencoded({ extended: false })); 
 app.use(express.static("public"));
+
 
 //======================Configure Database==============================
 mongoose.Promise = Promise;

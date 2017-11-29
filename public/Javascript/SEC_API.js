@@ -4,8 +4,10 @@ const appKey = "2s6bv57phxdxetkxhry3zupk"
 const timeSeries = "qtr" //ttm" monthly
 const numberTime = "20"
 
+// https://edgaronline.api.mashery.com/v2/corefinancials/qtr?primarysymbols=aapl&numperiods=20&appkey=2s6bv57phxdxetkxhry3zupk
+
 $.ajax({
- url: "https://edgaronline.api.mashery.com/v2/corefinancials/" + timeSeries + "?primarysymbols=" + ticker + "&numperiods=" + numberTime + "&appkey=" + appKey,
+ url: "http://edgaronline.api.mashery.com/v2/corefinancials/" + timeSeries + "?primarysymbols=" + ticker + "&numperiods=" + numberTime + "&appkey=" + appKey,
  method: 'GET',
 }).done(function(result) {
   // console.log(result.result.rows[0].values)
